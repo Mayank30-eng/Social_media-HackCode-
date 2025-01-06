@@ -52,3 +52,26 @@
     width: 10rem;
     margin-left: 35%;
 }
+
+
+
+
+/* Ani,mation button  */
+
+.animated-bot {
+    animation: float 4s ease-in-out infinite;
+    transform-origin: center;
+  }
+  
+  @keyframes float {
+    0% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-20px);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+  

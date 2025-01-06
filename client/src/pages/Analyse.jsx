@@ -4,6 +4,7 @@ import "react-json-view-lite/dist/index.css";
 import FileUploadRoundedIcon from "@mui/icons-material/FileUploadRounded";
 import AutoGraphRoundedIcon from "@mui/icons-material/AutoGraphRounded";
 import ChatBubbleRoundedIcon from "@mui/icons-material/ChatBubbleRounded";
+import { LuBot } from "react-icons/lu";
 import ChatModal from "../components/ChatModal";
 import './analyse.css';
 import Header from "../components/Header";
@@ -12,7 +13,7 @@ import Footer from "../components/Footer";
 
 const InputComponent = ({ setAnalyzedText, tab, setId }) => {
   const [inputURL, setInputURL] = useState(
-    "https://postpulse.ronakpaul.com/demo-posts?userid=ageage&n=10"
+    "http://localhost:3000/demo-posts?userid=dharam&n=10"
   );
   const [userID, setUserID] = useState("");
   const fileInputRef = useRef(null);
@@ -355,10 +356,11 @@ const Analyse = () => {
               
               <p>- {insight}</p>
             ))}
+            <h2 className=" text-center mb-5 font-bold text-lg ">For further information, please interact with our bot. </h2>
           </div>
         ) : (
           <div className="text-black  text-center">
-            <h2 className=" text-center mb-5 font-bold text-lg ">Your Analysed Data:</h2>
+            <h2 className=" text-center mb-5 font-bold text-lg ">Your Analyzed Data Insights:</h2>
             {analyzedText.isAnalyzing ? (
               <p>Analyzing...</p>
             ) : (
@@ -372,7 +374,9 @@ const Analyse = () => {
         className="fixed bottom-10 right-10 w-fit bg-zinc-900 p-3 rounded-full cursor-pointer"
         onClick={() => setIsChatModalHidden(!isChatModalHidden)}
       >
-        <ChatBubbleRoundedIcon className="text-violet-600" fontSize="medium" />
+       <div className=" flex justify-center items-center">
+      <LuBot className="animated-bot text-white text-7xl rounded-lg" />
+    </div>
       </div>
       <Footer/>
     </div>
