@@ -17,38 +17,7 @@ const Footer = () => {
             Lorem ipsum dolor sit amet consectetur adipisicing elit.
           </p>
 
-          {/* Action Buttons */}
-          <div className="flex flex-col mt-4 sm:flex-row sm:items-center sm:justify-center">
-            {/* View Demo Button with Link */}
-            <a
-              href="/analyze" // Replace with your desired URL
-              target="" // Opens link in a new tab
-              rel="noopener noreferrer"
-            >
-              <motion.button
-                className="flex items-center justify-center order-1 w-full px-6 py-3 mt-3 text-lg font-semibold text-white bg-gradient-to-r from-blue-500 to-purple-500 rounded-full shadow-lg sm:mx-2 sm:w-auto hover:from-blue-600 hover:to-purple-600 hover:shadow-xl transition-all"
-                whileHover={{ scale: 1.1 }}
-                whileTap={{ scale: 0.95 }}
-              >
-                View Demo
-              </motion.button>
-            </a>
-
-            {/* Get Started Button with Link */}
-            <a
-              href="/analyze" // Replace with your desired URL
-              target="" // Opens link in a new tab
-              rel="noopener noreferrer"
-            >
-              <motion.button
-                className="w-full px-6 py-3 mt-3 text-lg font-semibold text-white bg-gradient-to-r from-blue-500 to-purple-500 rounded-full shadow-lg sm:mx-2 sm:w-auto hover:from-blue-600 hover:to-purple-600 hover:shadow-xl transition-all"
-                whileHover={{ scale: 1.1 }}
-                whileTap={{ scale: 0.95 }}
-              >
-                Get Started
-              </motion.button>
-            </a>
-          </div>
+          
 
           {/* Social Icons */}
           <div className="flex mt-6 space-x-4">
