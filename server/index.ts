@@ -5,6 +5,7 @@ import { runAIWorkFlow } from "./workflow/langflow";
 import dotenv from "dotenv";
 import dbConnect, { collection } from "./db/db-connect";
 
+
 dotenv.config();
 
 const app = express();
@@ -61,27 +62,29 @@ app.post("/put-posts", async (req: Request, res: Response) => {
 });
 
 // for putting demo posts
+// Remove userId from query and ensure AI processes the prompt directly
 app.get("/analyse-posts", async (req: Request, res: Response) => {
-  const userId: string = req.query.userid as string;
-  const post_type: string = req.query.ptype as string;
+  const post_type: string = req.query.ptype as string; // Get the post type from query params
 
   const response = await runAIWorkFlow(
-    `can you compare ${post_type} of user id ${userId} with the post types. Seprate each insight by comma and don't include any other thing other than insights.`
+    `Can you compare ${post_type} with the other post types? Separate each insight by comma and don't include anything else other than insights.`
   );
 
   res.status(200).json({ response });
 });
+
 
 app.listen(PORT, () => {
   console.log("Server is listening in the port " + PORT);
 });
 
 // for chatting with the model
+// Remove userId from request body and ensure the AI processes the prompt directly
 app.post("/chat", async (req: Request, res: Response) => {
-  const userId: string = req.body.userid as string;
-  const prompt: string = req.body.prompt as string;
+  const prompt: string = req.body.prompt as string; // Get the prompt directly from the request body
 
-  const response = await runAIWorkFlow(`My user id ${userId} . ${prompt}`);
+  const response = await runAIWorkFlow(prompt); // Pass only the prompt to the AI
 
   res.status(200).json({ response });
 });
+
