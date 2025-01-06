@@ -16,6 +16,10 @@ dbConnect();
 app.use(cors());
 app.use(express.json());
 
+app.get('/', (req, res) => {
+  res.send('Backend is running');
+});
+
 // for generating demo-posts
 app.get("/demo-posts", (req: Request, res: Response) => {
   const userId = req.query.userid;

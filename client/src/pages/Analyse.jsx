@@ -13,7 +13,7 @@ import Footer from "../components/Footer";
 
 const InputComponent = ({ setAnalyzedText, tab, setId }) => {
   const [inputURL, setInputURL] = useState(
-    "http://localhost:3000/demo-posts?userid=dharam&n=10"
+    "https://social-media-hack-code-iegn.vercel.app/demo-posts?userid=dharam&n=10"
   );
   const [userID, setUserID] = useState("");
   const fileInputRef = useRef(null);
@@ -69,7 +69,7 @@ const InputComponent = ({ setAnalyzedText, tab, setId }) => {
   const savePosts = async () => {
     try {
       const response = await fetch(
-        "https://localhost:3000/put-posts",
+        "https://social-media-hack-code-iegn.vercel.app/put-posts",
         {
           method: "POST",
           headers: {
@@ -90,7 +90,7 @@ const InputComponent = ({ setAnalyzedText, tab, setId }) => {
         data: [],
       });
       const response = await fetch(
-        `http://localhost:3000/analyse-posts?userid=${userID}&ptype=${postType}`
+        `https://social-media-hack-code-iegn.vercel.app/analyse-posts?userid=${userID}&ptype=${postType}`
       );
 
       const data = await response.json();
