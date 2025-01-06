@@ -20,7 +20,7 @@ const ChatModal = ({ isHidden, setIsHidden, userid }) => {
     setIsThinking(true);
 
     try {
-      const response = await fetch("https://social-media-hack-code-iegn.vercel.app/chat", {
+      const response = await fetch("https://social-media-hackcode.onrender.com/chat", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
