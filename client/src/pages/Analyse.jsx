@@ -6,6 +6,9 @@ import AutoGraphRoundedIcon from "@mui/icons-material/AutoGraphRounded";
 import ChatBubbleRoundedIcon from "@mui/icons-material/ChatBubbleRounded";
 import ChatModal from "../components/ChatModal";
 import './analyse.css';
+import Header from "../components/Header";
+import Footer from "../components/Footer";
+
 
 const InputComponent = ({ setAnalyzedText, tab, setId }) => {
   const [inputURL, setInputURL] = useState(
@@ -165,7 +168,10 @@ const InputComponent = ({ setAnalyzedText, tab, setId }) => {
   };
 
   return (
-    <div className="imp">
+    <div className="imp mt-0 "style={{
+      background: "linear-gradient(to bottom right, #eef2ff, #ffd1e6, #d8efff)",
+    }}>
+
       {tab == 0 ? (
         <div className="w-full flex items-center space-x-3 ">
           <input
@@ -234,7 +240,7 @@ const InputComponent = ({ setAnalyzedText, tab, setId }) => {
 
       <div className="flex items-center space-x-5 mt-6 ">
         <button
-          className={`px-8 py-2 rounded-md bg-blue-700 text-white flex items-center space-x-3  ${
+          className={`px-8 py-2 rounded-lg  bg-gradient-to-r from-blue-200 via-purple-200 to-pink-200 text-black font-semibold border-4 border-blue-300 flex items-center space-x-3  ${
             posts.length == 0 && "brightness-50 cursor-not-allowed"
           }`}
           onClick={saveAndAnalyze}
@@ -243,7 +249,7 @@ const InputComponent = ({ setAnalyzedText, tab, setId }) => {
             <p>{loadingState.text}</p>
           ) : (
             <>
-              <p> Analyze </p> <AutoGraphRoundedIcon />
+              <p> Insights </p> 
             </>
           )}
         </button>
@@ -281,16 +287,23 @@ const Analyse = () => {
     */
 
   return (
-    <div className="h-screen flex flex-1 chatdata ">
+    <div className="h-screen flex flex-1 chatdata "
+    style={{
+      background: "linear-gradient(to bottom right, #eef2ff, #ffd1e6, #d8efff)",
+    }} >
+           <Header/>
+
       <ChatModal
         isHidden={isChatModalHidden}
         setIsHidden={setIsChatModalHidden}
         userid={id}
       />
 
-      <div className="h-full w-full flex-[0.5] flex items-center justify-center ">
-        <div className="h-3/4 w-full mt-3 mx-7 provbutton">
-          <p className="text-white text-xl font-medium py-3">
+      <div className="h-full w-full flex-[0.5] flex items-center justify-center "style={{
+      background: "linear-gradient(to bottom right, #eef2ff, #ffd1e6, #d8efff)",
+    }}>
+        <div className=" w-full  mx-7 provbutton">
+          <p className="text-black pr-24 text-xl text-center font-medium py-3">
             Provide Engagement Data / URL{" "}
           </p>
           <div className="h-full w-full py-1">
@@ -317,7 +330,9 @@ const Analyse = () => {
                 CSV Input
               </button>
             </div>
-            <div className="h-fit w-full  bg-neutral-900 rounded-md px-4 py-7 shadow-[0px_45px_97px_-46px_#7075ff62] inputcont">
+            <div className="h-fit w-full  bg-neutral-900 rounded-md px-4 py-7 shadow-[0px_45px_97px_-46px_#7075ff62] inputcont" style={{
+      background: "linear-gradient(to bottom right, #eef2ff, #ffd1e6, #d8efff)",
+    }}>
               {/* URL input component */}
 
               <InputComponent
@@ -329,15 +344,21 @@ const Analyse = () => {
           </div>
         </div>
       </div>
-      <div className="h-full flex-[0.5] flex items-center justify-center px-10 leading-7 anyalzebot">
+      <div className="h-full flex-[0.5] flex text-black items-center justify-center px-10 leading-7 anyalzebot" style={{
+      background: "linear-gradient(to bottom right, #eef2ff, #ffd1e6, #d8efff)",
+    }}>
         {analyzedText.data.length != 0 ? (
-          <div className="text-white leading-8">
+          
+          <div className="text-black font-serif font-semibold leading-8">
+          
             {analyzedText.data.map((insight) => (
+              
               <p>- {insight}</p>
             ))}
           </div>
         ) : (
-          <div className="text-white">
+          <div className="text-black  text-center">
+            <h2 className=" text-center mb-5 font-bold text-lg ">Your Analysed Data:</h2>
             {analyzedText.isAnalyzing ? (
               <p>Analyzing...</p>
             ) : (
@@ -353,6 +374,7 @@ const Analyse = () => {
       >
         <ChatBubbleRoundedIcon className="text-violet-600" fontSize="medium" />
       </div>
+      <Footer/>
     </div>
   );
 };
