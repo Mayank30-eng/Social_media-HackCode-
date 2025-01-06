@@ -1,45 +1,30 @@
 {
-    "version": 2,
-    "projects": {
-      "frontend": {
-        "root": "client",
-        "framework": "react",
-        "buildCommand": "npm run build",
-        "outputDirectory": "build"
-      },
-      "backend": {
-        "root": "server",
-        "framework": "node",
-        "buildCommand": "npm run build",
-        "outputDirectory": "dist"
-      }
+  "version": 2,
+  "builds": [
+    {
+      "src": "server/dist/index.js",
+      "use": "@vercel/node"
     },
-    "builds": [
-      {
-        "src": "server/dist/index.js",
-        "use": "@vercel/node"
-      },
-      {
-        "src": "client/package.json",
-        "use": "@vercel/static-build",
-        "config": {
-          "distDir": "client/build"
-        }
+    {
+      "src": "client/package.json",
+      "use": "@vercel/static-build",
+      "config": {
+        "distDir": "client/build"
       }
-    ],
-    "routes": [
-      {
-        "src": "/api/(.*)",
-        "dest": "server/dist/index.js"
-      },
-      {
-        "src": "/(.*)",
-        "dest": "/client/$1"
-      }
-    ],
-    "env": {
-      "PORT": "3000",
-      "NODE_ENV": "production"
     }
+  ],
+  "routes": [
+    {
+      "src": "/api/(.*)",
+      "dest": "server/dist/index.js"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/client/$1"
+    }
+  ],
+  "env": {
+    "PORT": "3000",
+    "NODE_ENV": "production"
   }
-  
+}
