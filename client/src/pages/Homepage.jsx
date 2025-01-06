@@ -3,8 +3,12 @@ import { motion } from "framer-motion";
 import { BarChart2, Users, Globe, Activity } from "lucide-react";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
+import { useNavigate } from "react-router-dom";
+
 
 function HomePage() {
+  const navigate = useNavigate();
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-100 via-purple-100 to-pink-100 text-white flex flex-col w-screen">
       <Header />
@@ -73,19 +77,17 @@ function HomePage() {
         </motion.p>
 
         {/* Get Started Button with Link */}
-        <a
-          href="/analyze"  // Replace with your desired URL
-          target=""  // Opens link in a new tab
-          rel="noopener noreferrer"
-        >
-          <motion.button
+
+          <button
             className="w-full px-6 py-3 mt-3 text-lg font-semibold text-white bg-gradient-to-r from-blue-500 to-purple-500 rounded-full shadow-lg sm:mx-2 sm:w-auto hover:from-blue-600 hover:to-purple-600 hover:shadow-xl transition-all"
-            whileHover={{ scale: 1.1 }}
-            whileTap={{ scale: 0.95 }}
+            // whileHover={{ scale: 1.1 }}
+            // whileTap={{ scale: 0.95 }}
+            onClick={() => navigate("/analyze")}
           >
             Get Started
-          </motion.button>
-        </a>
+          </button>
+        
+        
       </section>
 
       <Footer />
