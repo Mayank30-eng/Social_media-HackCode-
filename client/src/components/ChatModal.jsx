@@ -2,6 +2,7 @@ import CloseRoundedIcon from "@mui/icons-material/CloseRounded";
 import SendRoundedIcon from "@mui/icons-material/SendRounded";
 import ChatBubbleRoundedIcon from "@mui/icons-material/ChatBubbleRounded";
 import { useState } from "react";
+import './chatcss.css';
 
 const ChatModal = ({ isHidden, setIsHidden, userid }) => {
   // type: Human
@@ -64,11 +65,11 @@ const ChatModal = ({ isHidden, setIsHidden, userid }) => {
 
   return (
     <div
-      className={`absolute top-0 left-0 w-full h-screen flex items-center justify-center backdrop-blur-sm ${
+      className={`fixed top-0 left-0 w-full h-screen flex items-center justify-center backdrop-blur-sm ${
         isHidden && "hidden"
       } z-50`}
     >
-      <div className="w-3/4 h-4/5 bg-neutral-900 px-5 py-7 rounded-md shadow-md shadow-black">
+      <div className="w-3/4 h-4/5 bg-neutral-900 px-5 py-7 rounded-md shadow-md shadow-black chat">
         <div className="flex items-center justify-between">
           <ChatBubbleRoundedIcon className="text-neutral-700" />
           <CloseRoundedIcon

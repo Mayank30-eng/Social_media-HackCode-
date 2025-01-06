@@ -5,6 +5,7 @@ import FileUploadRoundedIcon from "@mui/icons-material/FileUploadRounded";
 import AutoGraphRoundedIcon from "@mui/icons-material/AutoGraphRounded";
 import ChatBubbleRoundedIcon from "@mui/icons-material/ChatBubbleRounded";
 import ChatModal from "../components/ChatModal";
+import './analyse.css';
 
 const InputComponent = ({ setAnalyzedText, tab, setId }) => {
   const [inputURL, setInputURL] = useState(
@@ -164,9 +165,9 @@ const InputComponent = ({ setAnalyzedText, tab, setId }) => {
   };
 
   return (
-    <div>
+    <div className="imp">
       {tab == 0 ? (
-        <div className="w-full flex items-center space-x-3">
+        <div className="w-full flex items-center space-x-3 ">
           <input
             type="text"
             value={inputURL}
@@ -184,7 +185,7 @@ const InputComponent = ({ setAnalyzedText, tab, setId }) => {
           </button>
         </div>
       ) : (
-        <div className="w-full">
+        <div className="w-full ">
           <input
             ref={fileInputRef}
             type="file"
@@ -207,7 +208,7 @@ const InputComponent = ({ setAnalyzedText, tab, setId }) => {
         </div>
       )}
 
-      <div className="mt-8">
+      <div className="mt-8 ">
         <div
           className={`bg-black h-72 rounded-lg border border-neutral-800  ${
             posts.length == 0
@@ -231,7 +232,7 @@ const InputComponent = ({ setAnalyzedText, tab, setId }) => {
         </div>
       </div>
 
-      <div className="flex items-center space-x-5 mt-6">
+      <div className="flex items-center space-x-5 mt-6 ">
         <button
           className={`px-8 py-2 rounded-md bg-blue-700 text-white flex items-center space-x-3  ${
             posts.length == 0 && "brightness-50 cursor-not-allowed"
@@ -249,7 +250,7 @@ const InputComponent = ({ setAnalyzedText, tab, setId }) => {
 
         <div>
           <select
-            className="px-2 py-1 bg-transparent text-white border border-neutral-800 rounded-md"
+            className="px-2 py-1 bg-black text-white border border-neutral-800 rounded-md "
             value={postType}
             onChange={(e) => setPostType(e.target.value)}
           >
@@ -280,21 +281,21 @@ const Analyse = () => {
     */
 
   return (
-    <div className="h-screen flex flex-1">
+    <div className="h-screen flex flex-1 chatdata ">
       <ChatModal
         isHidden={isChatModalHidden}
         setIsHidden={setIsChatModalHidden}
         userid={id}
       />
 
-      <div className="h-full w-full flex-[0.5] flex items-center justify-center">
-        <div className="h-3/4 w-full mt-3 mx-7">
+      <div className="h-full w-full flex-[0.5] flex items-center justify-center ">
+        <div className="h-3/4 w-full mt-3 mx-7 provbutton">
           <p className="text-white text-xl font-medium py-3">
             Provide Engagement Data / URL{" "}
           </p>
           <div className="h-full w-full py-1">
             {/* Tabs */}
-            <div className="w-full flex items-center space-x-4 mb-2">
+            <div className="w-full flex items-center space-x-4 mb-2 buttons">
               <button
                 className={` w-full py-1 rounded-md ${
                   currentTab == 0
@@ -316,7 +317,7 @@ const Analyse = () => {
                 CSV Input
               </button>
             </div>
-            <div className="h-fit w-full  bg-neutral-900 rounded-md px-4 py-7 shadow-[0px_45px_97px_-46px_#7075ff62]">
+            <div className="h-fit w-full  bg-neutral-900 rounded-md px-4 py-7 shadow-[0px_45px_97px_-46px_#7075ff62] inputcont">
               {/* URL input component */}
 
               <InputComponent
@@ -328,7 +329,7 @@ const Analyse = () => {
           </div>
         </div>
       </div>
-      <div className="h-full flex-[0.5] flex items-center justify-center px-10 leading-7">
+      <div className="h-full flex-[0.5] flex items-center justify-center px-10 leading-7 anyalzebot">
         {analyzedText.data.length != 0 ? (
           <div className="text-white leading-8">
             {analyzedText.data.map((insight) => (
@@ -347,7 +348,7 @@ const Analyse = () => {
       </div>
 
       <div
-        className="absolute bottom-10 right-10 w-fit bg-zinc-900 p-3 rounded-full cursor-pointer"
+        className="fixed bottom-10 right-10 w-fit bg-zinc-900 p-3 rounded-full cursor-pointer"
         onClick={() => setIsChatModalHidden(!isChatModalHidden)}
       >
         <ChatBubbleRoundedIcon className="text-violet-600" fontSize="medium" />
