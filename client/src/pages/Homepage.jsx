@@ -10,7 +10,7 @@ function HomePage() {
   const navigate = useNavigate();
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-100 via-purple-100 to-pink-100 text-white flex flex-col w-screen">
+    <div className="min-h-screen bg-gradient-to-br from-blue-100 via-purple-100 to-pink-100  flex flex-col w-screen">
       <Header />
 
       {/* Header Section */}
