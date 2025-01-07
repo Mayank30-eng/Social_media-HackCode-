@@ -16,7 +16,7 @@ const Header = () => {
         {/* Logo or Brand */}
         <div className="text-black font-extrabold text-xl sm:text-2xl">
           <a href="/" className="text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-purple-500">
-            Hackode👨‍💻
+            HackCode👨‍💻
           </a>
         </div>
 
@@ -64,7 +64,7 @@ const Header = () => {
           </button>
           <button
             className="text-black hover:text-gray-700 relative group pb-3"
-            onClick={() => window.open("https://github.com", "_blank")}
+            onClick={() => window.open("https://github.com/rahulpatil298/Social_media-HackCode-", "_blank")}
           >
             <FaGithub className="inline-block mr-2" />
             GitHub

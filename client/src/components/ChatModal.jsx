@@ -87,7 +87,7 @@ const ChatModal = ({ isHidden, setIsHidden, userid }) => {
                   history.type == "Human"
                     ? "w-[400px] ml-auto bg-blue-800 "
                     : "w-[470px] mr-auto bg-neutral-700 "
-                } px-5 py-3 `}
+                } px-5 py-3 chatwidth`}
                 key={index}
               >
                 <p className="text-white">{history.text}</p>

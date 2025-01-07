@@ -14,7 +14,7 @@ const Footer = () => {
 
           {/* Description */}
           <p className="max-w-md mx-auto mt-4 text-gray-500 dark:text-gray-400">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+          Innovation Starts Here – HackCode Team
           </p>
 
           
@@ -80,20 +80,7 @@ const Footer = () => {
             >
               Teams
             </a>
-            <a
-              href="#"
-              className="mx-2 text-sm text-gray-500 transition-colors duration-300 hover:text-gray-500 dark:hover:text-gray-300"
-              aria-label="Privacy"
-            >
-              Privacy
-            </a>
-            <a
-              href="#"
-              className="mx-2 text-sm text-gray-500 transition-colors duration-300 hover:text-gray-500 dark:hover:text-gray-300"
-              aria-label="Cookies"
-            >
-              Cookies
-            </a>
+            
           </div>
         </div>
       </div>

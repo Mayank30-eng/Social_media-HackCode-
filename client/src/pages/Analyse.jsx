@@ -304,7 +304,7 @@ const Analyse = () => {
       background: "linear-gradient(to bottom right, #eef2ff, #ffd1e6, #d8efff)",
     }}>
         <div className=" w-full  mx-7 provbutton">
-          <p className="text-black pr-24 text-xl text-center font-medium py-3">
+          <p className="text-black pr-24 text-xl-bold text-center font-medium py-3">
             Provide Engagement Data / URL{" "}
           </p>
           <div className="h-full w-full py-1">
@@ -374,6 +374,8 @@ const Analyse = () => {
         className="fixed bottom-10 right-10 w-fit bg-zinc-900 p-3 rounded-full cursor-pointer"
         onClick={() => setIsChatModalHidden(!isChatModalHidden)}
       >
+        <h1 className="font-semibold text-lg text-white my-4 " >ChatBot</h1>
+
        <div className=" flex justify-center items-center">
       <LuBot className="animated-bot text-white text-7xl rounded-lg" />
     </div>
