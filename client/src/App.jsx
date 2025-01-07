@@ -3,7 +3,7 @@ import Homepage from "./pages/Homepage";
 import Header from "./components/Header";
 import NotFound from "./pages/PageNotFound";
 import Analyse from "./pages/Analyse";
-import ChatClient from "./pages/ChatPage";
+import ChatModal from "./components/ChatModal";
 import OverviewPage from "./pages/OverviewPage";
 import FeaturesPage from "./pages/FeaturesPage";
 import TeamPage from "./pages/TeamPage";
@@ -28,7 +28,7 @@ function App() {
         <Route path="/" element={<Homepage />} />
         <Route path="/analyze" element={<Analyse />} />
         <Route path="*" element={<NotFound />} />
-        <Route path="/chat" element={<ChatClient />} />
+        <Route path="/chat" element={<ChatModal />} />
         {/* <Route path='/' element={<HomePage />} /> */}
         <Route path='/overview' element={<OverviewPage />} />
         <Route path="/features" element={<FeaturesPage />} />
