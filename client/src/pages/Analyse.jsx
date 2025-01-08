@@ -13,7 +13,7 @@ import Footer from "../components/Footer";
 
 const InputComponent = ({ setAnalyzedText, tab, setId }) => {
   const [inputURL, setInputURL] = useState(
-    "https://social-media-hackcode.onrender.com/demo-posts?userid=dharam&n=10"
+    "https://gen-ai-server-rho.vercel.app/demo-posts?userid=dharam&n=10"
   );
   const [userID, setUserID] = useState("");
   const fileInputRef = useRef(null);
@@ -69,7 +69,7 @@ const InputComponent = ({ setAnalyzedText, tab, setId }) => {
   const savePosts = async () => {
     try {
       const response = await fetch(
-        "https://social-media-hackcode.onrender.com/put-posts",
+        "https://gen-ai-server-rho.vercel.app/put-posts",
         {
           method: "POST",
           headers: {
@@ -90,7 +90,7 @@ const InputComponent = ({ setAnalyzedText, tab, setId }) => {
         data: [],
       });
       const response = await fetch(
-        `https://social-media-hackcode.onrender.com/analyse-posts?userid=${userID}&ptype=${postType}`
+        `https://gen-ai-server-rho.vercel.app/analyse-posts?userid=${userID}&ptype=${postType}`
       );
 
       const data = await response.json();
