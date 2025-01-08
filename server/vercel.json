@@ -2,7 +2,7 @@
   "version": 2,
   "builds": [
     {
-      "src": "server/dist/index.js",
+      "src": "server/index.js",
       "use": "@vercel/node"
     },
     {
@@ -15,16 +15,12 @@
   ],
   "routes": [
     {
-      "src": "/api/(.*)",
-      "dest": "server/dist/index.js"
+      "src": "/api/(.*)", 
+      "dest": "server/index.js"
     },
     {
       "src": "/(.*)",
       "dest": "/client/$1"
     }
-  ],
-  "env": {
-    "PORT": "3000",
-    "NODE_ENV": "production"
-  }
+  ]
 }
