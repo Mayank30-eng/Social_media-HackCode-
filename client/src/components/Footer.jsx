@@ -23,7 +23,7 @@ const Footer = () => {
           <div className="flex mt-6 space-x-4">
             {/* GitHub */}
             <a
-              href="https://github.com/Dharamchandpatle"  // Replace with your GitHub URL
+              href="https://github.com/rahulpatil298/Social_media-HackCode-"  // Replace with your GitHub URL
               target="_blank"
               rel="noopener noreferrer"
               className="text-white hover:text-gray-400"
@@ -31,29 +31,11 @@ const Footer = () => {
             >
               <FaGithub size={24} />
             </a>
-            {/* LinkedIn */}
-            <a
-              href="https://linkedin.com/"  // Replace with your LinkedIn URL
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-white hover:text-gray-400"
-              aria-label="LinkedIn"
-            >
-              <FaLinkedin size={24} />
-            </a>
-            {/* Twitter */}
-            <a
-              href="https://twitter.com/your-profile"  // Replace with your Twitter URL
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-white hover:text-gray-400"
-              aria-label="Twitter"
-            >
-              <FaTwitter size={24} />
-            </a>
+            
+            
             {/* YouTube */}
             <a
-              href="https://youtube.com/your-channel"  // Replace with your YouTube URL
+              href="https://youtu.be/qxsTL6r2EMk"  // Replace with your YouTube URL
               target="_blank"
               rel="noopener noreferrer"
               className="text-white hover:text-gray-400"
@@ -74,7 +56,7 @@ const Footer = () => {
           {/* Footer Links */}
           <div className="flex mt-3 -mx-2 sm:mt-0">
             <a
-              href="#"
+              href="/team"
               className="mx-2 text-sm text-gray-500 transition-colors duration-300 hover:text-gray-500 dark:hover:text-gray-300"
               aria-label="Teams"
             >
