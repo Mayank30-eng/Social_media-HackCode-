@@ -3,6 +3,7 @@ import SendRoundedIcon from "@mui/icons-material/SendRounded";
 import ChatBubbleRoundedIcon from "@mui/icons-material/ChatBubbleRounded";
 import { useState } from "react";
 import './chatcss.css';
+import InsightComponent from "./DataAnalyzer";
 
 const ChatModal = ({ isHidden, setIsHidden, userid }) => {
   // type: Human
@@ -90,7 +91,8 @@ const ChatModal = ({ isHidden, setIsHidden, userid }) => {
                 } px-5 py-3 chatwidth`}
                 key={index}
               >
-                <p className="text-white">{history.text}</p>
+                {/* {history.text} */}
+                <p className="text-white"><InsightComponent text={history.text} /></p>
               </div>
             ))}
             {isThinking && (
