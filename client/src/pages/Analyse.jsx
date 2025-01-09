@@ -169,9 +169,10 @@ const InputComponent = ({ setAnalyzedText, tab, setId }) => {
   };
 
   return (
-    <div className="imp mt-0 "style={{
+    <div className="imp mt-0 " style={{
       background: "linear-gradient(to bottom right, #eef2ff, #ffd1e6, #d8efff)",
     }}>
+      <p className="text-black font-semibold mb-3">Fetch insights using this demo URL or yours.</p>
 
       {tab == 0 ? (
         <div className="w-full flex items-center space-x-3 ">
@@ -181,11 +182,11 @@ const InputComponent = ({ setAnalyzedText, tab, setId }) => {
             onChange={(e) => {
               setInputURL(e.target.value);
             }}
-            className="w-full bg-black py-2 px-3 rounded-md text-white placeholder:text-slate-500 outline-none"
+            className="w-full bg-black py-1 px-3 rounded-md text-white placeholder:text-slate-500 outline-none"
             placeholder="URL"
           />
           <button
-            className="bg-white px-4 py-1 rounded-md text-sm"
+            className="bg-white px-4 py-1 border-2 border-black rounded-md text-sm"
             onClick={fetchPosts}
           >
             Fetch
@@ -217,11 +218,10 @@ const InputComponent = ({ setAnalyzedText, tab, setId }) => {
 
       <div className="mt-8 ">
         <div
-          className={`bg-black h-72 rounded-lg border border-neutral-800  ${
-            posts.length == 0
-              ? "flex justify-center  items-center"
-              : "overflow-y-scroll no-scrollbar"
-          }`}
+          className={`bg-black h-72 rounded-lg border border-neutral-800  ${posts.length == 0
+            ? "flex justify-center  items-center"
+            : "overflow-y-scroll no-scrollbar"
+            }`}
         >
           {isFetching ? (
             <p className="bg-gradient-to-r from-orange-400  to-indigo-400 inline-block text-transparent bg-clip-text">
@@ -241,16 +241,15 @@ const InputComponent = ({ setAnalyzedText, tab, setId }) => {
 
       <div className="flex items-center space-x-5 mt-6 ">
         <button
-          className={`px-8 py-2 rounded-lg  bg-gradient-to-r from-blue-200 via-purple-200 to-pink-200 text-black font-semibold border-4 border-blue-300 flex items-center space-x-3  ${
-            posts.length == 0 && "brightness-50 cursor-not-allowed"
-          }`}
+          className={`px-8 py-2 rounded-lg  bg-gradient-to-r from-blue-200 via-purple-200 to-pink-200 text-black font-semibold border-4 border-blue-300 flex items-center space-x-3  ${posts.length == 0 && "brightness-50 cursor-not-allowed"
+            }`}
           onClick={saveAndAnalyze}
         >
           {loadingState.isLoading ? (
             <p>{loadingState.text}</p>
           ) : (
             <>
-              <p> Insights </p> 
+              <p> Insights </p>
             </>
           )}
         </button>
@@ -289,10 +288,10 @@ const Analyse = () => {
 
   return (
     <div className="h-screen flex flex-1 chatdata "
-    style={{
-      background: "linear-gradient(to bottom right, #eef2ff, #ffd1e6, #d8efff)",
-    }} >
-           <Header/>
+      style={{
+        background: "linear-gradient(to bottom right, #eef2ff, #ffd1e6, #d8efff)",
+      }} >
+      <Header />
 
       <ChatModal
         isHidden={isChatModalHidden}
@@ -300,9 +299,9 @@ const Analyse = () => {
         userid={id}
       />
 
-      <div className="h-full w-full flex-[0.5] flex items-center justify-center "style={{
-      background: "linear-gradient(to bottom right, #eef2ff, #ffd1e6, #d8efff)",
-    }}>
+      <div className="h-full w-full flex-[0.5] flex items-center justify-center " style={{
+        background: "linear-gradient(to bottom right, #eef2ff, #ffd1e6, #d8efff)",
+      }}>
         <div className=" w-full  mx-7 provbutton">
           <p className="text-black pr-24 text-xl-bold text-center font-medium py-3">
             Provide Engagement Data / URL{" "}
@@ -311,29 +310,33 @@ const Analyse = () => {
             {/* Tabs */}
             <div className="w-full flex items-center space-x-4 mb-2 buttons">
               <button
-                className={` w-full py-1 rounded-md ${
-                  currentTab == 0
-                    ? "bg-white text-black"
-                    : "bg-black text-white border border-neutral-800"
-                }`}
+                className={` w-full py-1 rounded-md ${currentTab == 0
+                  ? "bg-white text-black"
+                  : "bg-black text-white border border-neutral-800"
+                  }`}
                 onClick={() => setCurrentTab(0)}
               >
                 URL Input
               </button>
               <button
-                className={` w-full py-1 rounded-md ${
-                  currentTab == 1
-                    ? "bg-white text-black"
-                    : "bg-black text-white border border-neutral-800"
-                }`}
+                className={` w-full py-1 rounded-md ${currentTab == 1
+                  ? "bg-white text-black"
+                  : "bg-black text-white border border-neutral-800"
+                  }`}
                 onClick={() => setCurrentTab(1)}
               >
                 CSV Input
               </button>
             </div>
             <div className="h-fit w-full  bg-neutral-900 rounded-md px-4 py-7 shadow-[0px_45px_97px_-46px_#7075ff62] inputcont" style={{
-      background: "linear-gradient(to bottom right, #eef2ff, #ffd1e6, #d8efff)",
-    }}>
+              background: "linear-gradient(to bottom right, #eef2ff, #ffd1e6, #d8efff)",
+            }}>
+
+
+
+
+
+
               {/* URL input component */}
 
               <InputComponent
@@ -346,14 +349,14 @@ const Analyse = () => {
         </div>
       </div>
       <div className="h-full flex-[0.5] flex text-black items-center justify-center px-10 leading-7 anyalzebot" style={{
-      background: "linear-gradient(to bottom right, #eef2ff, #ffd1e6, #d8efff)",
-    }}>
+        background: "linear-gradient(to bottom right, #eef2ff, #ffd1e6, #d8efff)",
+      }}>
         {analyzedText.data.length != 0 ? (
-          
+
           <div className="text-black font-serif font-semibold leading-8">
-          
+
             {analyzedText.data.map((insight) => (
-              
+
               <p>- {insight}</p>
             ))}
             <h2 className=" text-center mb-5 font-bold text-lg ">For further information, please interact with our bot. </h2>
@@ -369,18 +372,31 @@ const Analyse = () => {
           </div>
         )}
       </div>
-
+      <div className="fixed bottom-52 right-3 w-fit">
+        <p
+          className="text-black text-lg font-bold text-center"
+          style={{ textShadow: "1px 1px 3px black" }}
+        >
+          Fetch data before <br /> using the bot.
+        </p>
+      </div>
       <div
         className="fixed bottom-10 right-10 w-fit bg-zinc-900 p-3 rounded-full cursor-pointer"
         onClick={() => setIsChatModalHidden(!isChatModalHidden)}
       >
-        <h1 className="font-semibold text-lg text-white my-4 " >ChatBot</h1>
+        <h1
+          className="font-semibold text-lg text-white my-4"
+          style={{ textShadow: "2px 2px 4px black" }}
+        >
+          ChatBot
+        </h1>
 
-       <div className=" flex justify-center items-center">
-      <LuBot className="animated-bot text-white text-7xl rounded-lg" />
-    </div>
+        <div className="flex justify-center items-center">
+          <LuBot className="animated-bot text-white text-7xl rounded-lg" />
+        </div>
       </div>
-      <Footer/>
+
+      <Footer />
     </div>
   );
 };
