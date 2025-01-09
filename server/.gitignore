@@ -3,4 +3,5 @@
 
 /server/dist
 
-/server.env
+/server/.env
+.env
