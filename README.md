@@ -1,12 +1,6 @@
 # Hack Code Team 
 
 ✨ Welcome to the **Pre-Hackathon Assignment: Social Media Performance Analysis** submission by **Hack Code**. Our dynamic team consists of:
-
-- 👨‍💻 **Dharamchand Patle**  
-- 👨‍💻 **Mayank Pradkar**  
-- 👨‍💻 **Rahul Patil**  
-- 👨‍💻 **Neelesh Kumar Jatav**
-
 ---
 
 ## 🔧 Assignment Overview
@@ -116,36 +110,11 @@ To develop a basic analytics module leveraging **Langflow** and **DataStax Astra
 
 ## 🚀 Deploy Link
 
-Access the live application here: [**Hack Code Analytics Module**](#)
+Access the live application here: [**Analytics Module**](#)
 
 ---
 
-## 📚 Submission Requirements
 
-1. **🔗 Project Submission:**
-   - Upload your project to [FindCoder](https://www.findcoder.io/).
-   - Link it to the **Level Supermind Hackathon**.
-
-2. **🎥 Demo Video:**
-   - Record a video covering:
-     - Langflow workflow
-     - Use of DataStax for data storage and querying
-     - Insights generated using GPT
-   - Submit the video link (YouTube, public access).
-
-3. **🔐 Repository Link:**
-   - Submit the public GitHub repository link or Google Drive ZIP file containing the code.
-
----
-
-## 🎮 Judges
-- **Hitesh Choudhary**
-- **Sakham Choudhary**
-- **Ranveer Allahbadia**
-- **Harshill Karia**
-- **Ayush Anand**
-
----
 
 ## 📊 Tech Stack
 
@@ -155,11 +124,4 @@ Access the live application here: [**Hack Code Analytics Module**](#)
 - **Workflow Automation:** 🔄 Langflow
 
 ---
-
-## 💪 Follow Us
-
-Stay connected for updates and insights:
-- **🔖 Twitter:** [@Hiteshdotcom](https://twitter.com/Hiteshdotcom)
-
-Let’s hack the future! 🚀
 
