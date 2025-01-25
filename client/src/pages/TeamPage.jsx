@@ -6,36 +6,22 @@ import Footer from "../components/Footer";
 
 const teamMembers = [
   {
-    name: "Mayank Pradkar",
-    image: "images/WhatsApp Image 2025-01-06 at 6.53.57 PM.jpeg",
+    name: "Mayank Gohiya",
+    image: "images/1000109619.jpeg",
     description:
-      "🚀 A group of passionate developers from IET DAVV, driven to tackle challenges, innovate solutions, and turn ideas into reality. Hack Innovate Create.",
+      "🚀Hi, I’m a passionate tech enthusiast with skills in web development, Python, and problem-solving. I’ve worked on projects like building user-friendly apps and creating innovative solutions to real-world challenges. I thrive in collaborative environments and enjoy turning ideas into impactful results. I’m excited to bring my creativity, technical expertise, and dedication to this hackathon and contribute to building something meaningful.”",
     icon: <User className="w-6 h-6 text-blue-500" />,
-    linkedin: "https://www.linkedin.com/in/mayankparadkar/",
+    linkedin: "https://www.linkedin.com/in/mayank-gohiya-7b7974250/",
   },
+  
+  
   {
-    name: "Dharamchand Patle",
-    image: "images/Dharamchand.jpg",
+    name: "Ayush Birthray  ",
+    image: "https://media.licdn.com/dms/image/v2/D4D03AQFqAbMD0DsUEA/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1691403881123?e=1743033600&v=beta&t=15yuAgIcn4BegzP4azTlDEaf2oHlqpnGfxc_6LTd7KE",
     description:
-      "🚀 A group of passionate developers from IET DAVV, driven to tackle challenges, innovate solutions, and turn ideas into reality. Hack Innovate Create.",
+      "🚀Hi, I’m a passionate tech enthusiast with skills in web development, Python, and problem-solving. I’ve worked on projects like building user-friendly apps and creating innovative solutions to real-world challenges. I thrive in collaborative environments and enjoy turning ideas into impactful results. I’m excited to bring my creativity, technical expertise, and dedication to this hackathon and contribute to building something meaningful.”",
     icon: <User className="w-6 h-6 text-blue-500" />,
-    linkedin: "https://www.linkedin.com/in/dharamchand-fullstackdeveloper/",
-  },
-  {
-    name: "Rahul Patil",
-    image: "images/image.png",
-    description:
-      "🚀 A group of passionate developers from IET DAVV, driven to tackle challenges, innovate solutions, and turn ideas into reality. Hack Innovate Create.",
-    icon: <User className="w-6 h-6 text-blue-500" />,
-    linkedin: "https://www.linkedin.com/in/rahul-patil-a48898279/",
-  },
-  {
-    name: "Neelesh Kumar Jatav",
-    image: "images/neelesh.png",
-    description:
-      "🚀 A group of passionate developers from IET DAVV, driven to tackle challenges, innovate solutions, and turn ideas into reality. Hack Innovate Create.",
-    icon: <User className="w-6 h-6 text-blue-500" />,
-    linkedin: "https://www.linkedin.com/in/neelesh-kumar-jatav-0a1719297/",
+    linkedin: "https://www.linkedin.com/in/ayush-birthray-4217b5260/",
   },
 ];
 
